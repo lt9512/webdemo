@@ -12,13 +12,19 @@ public class SampleController {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello World!";
+        return "Hello GeekWeekly!";
     }
 
     @RequestMapping("/v1/")
     @ResponseBody
     String v1api() {
-        return "Hello World1!";
+        return "Hello GeekWeekly V1!";
+    }
+
+    @RequestMapping("/v2/")
+    @ResponseBody
+    String v2api() {
+        return "Hello GeekWeekly V2!";
     }
 
     public static void main(String[] args) throws Exception {
