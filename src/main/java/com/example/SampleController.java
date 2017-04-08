@@ -33,6 +33,12 @@ public class SampleController {
         return "Hello GeekWeekly V3!";
     }
 
+    @RequestMapping("/v4/")
+    @ResponseBody
+    String v4api() {
+        return "Hello GeekWeekly V4!";
+    }
+
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class, args);
     }
