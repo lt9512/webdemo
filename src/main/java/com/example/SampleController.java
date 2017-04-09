@@ -15,28 +15,20 @@ public class SampleController {
         return "Hello GeekWeekly!";
     }
 
-    @RequestMapping("/v1/")
+    @RequestMapping("/service/")
     @ResponseBody
-    String v1api() {
-        return "Hello GeekWeekly V1!";
+    String awesomeService() {
+        return "Some awesome service...!";
     }
 
-    @RequestMapping("/v2/")
+    @RequestMapping("/service2/")
     @ResponseBody
-    String v2api() {
-        return "Hello GeekWeekly V2!";
+    String awesomeService2() {
+        return String.valueOf(add(40, 2));
     }
 
-    @RequestMapping("/v3/")
-    @ResponseBody
-    String v3api() {
-        return "Hello GeekWeekly V3!";
-    }
-
-    @RequestMapping("/v4/")
-    @ResponseBody
-    String v4api() {
-        return "Hello GeekWeekly V4!";
+    private int add (int x, int y) {
+        return x+y;
     }
 
     public static void main(String[] args) throws Exception {
