@@ -24,11 +24,13 @@ node {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
-   stage('Results') {
+
+   stage('Automated Tests') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archive 'target/*.jar'
    }
-   stage('Deploy') {
+
+   stage('Deploy to Prod') {
         // Depends on the 'Credentials Binding Plugin'
         // (https://wiki.jenkins-ci.org/display/JENKINS/Credentials+Binding+Plugin)
         withCredentials([[$class          : 'UsernamePasswordMultiBinding', credentialsId: 'cloudfoundry',
