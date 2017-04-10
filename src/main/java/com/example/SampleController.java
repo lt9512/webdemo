@@ -17,14 +17,8 @@ public class SampleController {
 
     @RequestMapping("/service/")
     @ResponseBody
-    String awesomeService() {
+    String service() {
         return "Some awesome service...!";
-    }
-
-    @RequestMapping("/service2/")
-    @ResponseBody
-    String awesomeService2() {
-        return String.valueOf(add(40, 2));
     }
 
     private int add (int x, int y) {
